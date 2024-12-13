@@ -1,0 +1,41 @@
+<!-- # templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Conversation Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Conversation Interface</h1>
+        
+        <div id="ai-avatar" class="avatar-container">
+            <!-- SVG will be injected here by JavaScript -->
+        </div>
+
+        <div id="conversation-container">
+            <div id="conversation-history"></div>
+        </div>
+
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="Type your message..."
+            >
+            <button id="send-btn">Send</button>
+            <button id="speech-btn">🎤</button>
+            <button id="end-conversation-btn">End Conversation</button>
+        </div>
+
+        <div id="conversation-report" class="hidden">
+            <h2>Conversation Report</h2>
+            <p id="report-text"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
